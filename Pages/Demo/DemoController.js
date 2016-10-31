@@ -101,6 +101,11 @@ var demoController=function($scope,$window)
 
         ++totalNumberOfUniqueTerms;
       }
+        if(totalNumberOfUniqueTerms==0)
+        {
+          alert("Two documents should contain at least one complete sentence");
+          return;
+        }
 
       $scope.percentage=100-((distance/Math.sqrt(totalNumberOfUniqueTerms))*100);
       $scope.IsResultShown=true;
