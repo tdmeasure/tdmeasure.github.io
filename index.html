@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TDMEAASURE</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body ng-app="tdmatrix">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand menuItem">
+                    <a href="#/" class="text-center">
+                        <h3><span class="logohightlight">TD</span>Measure</h3>
+                    </a>
+                </li>
+
+
+                                <li class="menuItem">
+                                    <a href="#/">Home</a>
+                                </li>
+
+                <li class="menuItem">
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+              <a href="#menu-toggle" class="col-xs-12 col-sm-1 btn btn-default" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
+              <a href="#menu-toggle" class="col-xs-12 col-sm-2 btn btn-danger right" ><i class="fa fa-github" aria-hidden="true"></i> Fork on Github</a>
+                    <div class="col-xs-12">
+                      <a href="#/" class="text-center">
+                        <h1 class="col-xs-12 logo"><span class="logohightlight">TD</span>Measure<sub>Beta</sub></h1>
+                      </a>
+                        <div ng-view class="view">
+
+                                        </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <script src="js/angular.min.js"></script>
+
+    <script src="js/angular-route.js"></script>
+
+    <script src="js/angular-sanitize.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://localhost:5080/tdmatrix/src/Config.js"></script>
+  <script src="http://localhost:5080/tdmatrix/src/Entities.js"></script>
+  <script src="http://localhost:5080/tdmatrix/src/stemmer.js"></script>
+  <script src="http://localhost:5080/tdmatrix/src/DisJointSet.js"></script>
+  <script src="http://localhost:5080/tdmatrix/src/TDMATRIX.js"></script>
+
+
+    <script src="js/index.js"></script>
+
+    <script src="Pages/Demo/DemoController.js"></script>
+    <script src="Pages/Tutorials/TutorialController.js"></script>
+    <script src="Pages/Download/DownloadController.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    $(".menuItem").click(function(e) {
+
+        //e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+  
+
+    </script>
+
+
+
+</body>
+
+</html>

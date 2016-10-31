@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="container alert alert-danger">
+    <a  class="close" data-dismiss="alert" onclick="return false;" aria-label="close">&times;</a>
+    <h4><p>You can view samples on our github repository to know how it work from <a href="">here</a></p></h4>
+  </div>
+
+  <div class="container alert alert-info">
+    <a  class="close" data-dismiss="alert" onclick="return false;" aria-label="close">&times;</a>
+    <h4><p>Below listed used classes in the application</p></h4>
+  </div>
+<div class="container classContainer" ng-repeat="class in classes">
+
+<section id="{{class.Name}}" class="row classTitle text-center">
+  <h4 >class: {{class.Name}}</h4>
+</section>
+    <div class="row  rowBody" ng-repeat="member in class.memberData">
+      <span class="col-xs-12 text-center memberHeader">{{member.name}}</span>
+      <div class="container"></div>
+        <div class="col-xs-12 memberFunction"><b>type :</b><a href='#/tutorial#{{member.link}}'><{{member.type}}></a> </div>
+        <div class="col-xs-12 memberFunction"><b>Description :</b>  {{member.function}}</div>
+        <div class="col-xs-12 memberFunction" ng-if="member.example!=undefined"><pre class="text-center">{{member.example}}</pre></div>
+
+    </div>
+
+    <div class="row  rowBody" ng-repeat="member in class.memberfunctions">
+    <span class="col-xs-12 text-center memberHeader">{{member.name}}</span>
+    <div class="col-xs-12" text-center><h5><b> Parameters </b></h5></div>
+    <div class="container"></div>
+    <div class="col-xs-12  paramsTable" ng-repeat="parameter in member.parameters">
+      <a href='#/tutorial#{{parameter.href}}'><{{parameter.type}}></a>  {{parameter.value}}</div>
+
+
+    <div class="col-xs-12 memberFunction"><b>Return type :</b><a href='#/tutorial#{{member.returnType.href}}'><{{member.returnType.type}}></a>  {{member.returnType.value}}</div>
+    <div class="col-xs-12 memberFunction"><b>Description :</b>  {{member.function}}</div>
+    </div>
+
+</div>
+
+<script>
+
+</script>
+
+</div>

@@ -1,0 +1,48 @@
+<div>
+<div class="container alert alert-danger">
+  <a  class="close" data-dismiss="alert" onclick="return false;" aria-label="close">&times;</a>
+  <h4><p>TD measure is a wasy for measuring similarity between documents using vector space model</p></h4>
+
+</div>
+
+<div class="col-xs-12 col-sm-6" ng-if="!IsResultShown" >
+<textarea class="contentTxtArea" ng-model="$parent.SourceDocText" placeholder="Insert source text here......."></textarea>
+</div>
+
+
+</div>
+
+
+<div class="col-xs-12 col-sm-6" ng-if="!IsResultShown" >
+<textarea class="contentTxtArea" id="destDocTxt"  ng-model="$parent.DestDocText"  placeholder="Insert destination text here......."></textarea>
+</div>
+
+
+<div class="row">
+
+<div>
+  <div class="col-xs-12 col-sm-6  top20"  ng-if="IsResultShown">
+    <div class="resultDiv" ng-bind-html="SourceDocument.value"></div>
+  </div>
+  <div class="col-xs-12 col-sm-6  top20 " ng-if="IsResultShown">
+    <div class="resultDiv" ng-bind-html="DestDocument.value"></div>
+  </div>
+</div>
+</div>
+
+
+<div class="text-center">
+  <div class="col-xs-12 col-sm-4 btn btn-success floatnone top20" ng-click="Compare()" ng-if="!IsResultShown"><h4><b>Compare</b></h4></span>
+  </div>
+  <div class="col-xs-12 col-sm-4 btn btn-warning floatnone top20" ng-if="IsResultShown"><h4><b>Similarity percent : {{percentage.toFixed(2)}}%</b></h4></span>
+  </div>
+  <div class="col-xs-12 col-sm-4 btn btn-success floatnone top20" ng-click="Reset()" ng-if="IsResultShown"><h4><b>Try Another Compare</b></h4></span>
+  </div>
+</div>
+
+
+<script>
+
+</script>
+
+</div>
