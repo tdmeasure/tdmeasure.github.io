@@ -103,7 +103,7 @@ var demoController=function($scope,$window)
       }
         if(totalNumberOfUniqueTerms==0)
         {
-          alert("Two documents should contain at least one complete sentence");
+          alert("One of the two documents should contain at least one complete sentence");
           return;
         }
 
